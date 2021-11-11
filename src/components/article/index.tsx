@@ -14,7 +14,7 @@ const Article:React.FC<Props> = ({ articles, title }) => {
         const time = moment(article.publishedAt || moment.now()).fromNow().slice(0, 1) == "a" ? 1
         : moment(article.publishedAt || moment.now()).fromNow().slice(0, 1);
         return (
-          <a href={article.url} key={index} target="_blank" rel="noopener">
+          <a href={article.url} key={index} target="_blank" rel="noreferrer noopener">
             <article className={styles.article__main}>
               <div className={styles.article__title}>
                 <p>{article.title}</p>
