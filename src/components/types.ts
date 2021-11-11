@@ -3,7 +3,7 @@ type Props = {
     article: {
       author: string;
       title: string;
-      publishImage: string;
+      publishedAt: string;
       url: string;
       urlToImage: string;
     }
@@ -20,23 +20,23 @@ type Props = {
         }
       ];
     };
+    daily: [
+      date: {
+        dt: number;
+        clouds: number;
+        temp: {
+          min: number;
+          max: number;
+        };
+        weather: [
+          conditions: {
+            id: number;
+            icon: string;
+          }
+        ];
+      }
+    ];
   };
-  daily: [
-    date: {
-      dt: number;
-      clouds: number;
-      temp: {
-        min: number;
-        max: number;
-      };
-      weather: [
-        conditions: {
-          id: number;
-          icon: string;
-        }
-      ];
-    }
-  ];
 };
 
 export default Props
